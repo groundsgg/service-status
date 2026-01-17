@@ -128,3 +128,7 @@ Run in dev mode with live reload using DevSpace in a Kubernetes cluster:
 devspace use namespace api
 devspace dev
 ```
+
+## License
+
+Licensed under the GNU Affero General Public License v3.0
