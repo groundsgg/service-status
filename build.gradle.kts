@@ -1,6 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.1.10"
-    kotlin("plugin.serialization") version "2.1.10"
+    java
     id("io.quarkus") version "3.30.4"
 }
 
@@ -20,7 +19,6 @@ repositories {
 
 dependencies {
     implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:3.30.8"))
-    implementation("io.quarkus:quarkus-kotlin")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-grpc")
     implementation("io.quarkus:quarkus-jdbc-postgresql")
@@ -37,7 +35,6 @@ dependencies {
     testImplementation("io.rest-assured:rest-assured")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.quarkus:quarkus-junit5-mockito")
-    testImplementation("org.mockito.kotlin:mockito-kotlin:6.2.2")
 }
 
 sourceSets {
