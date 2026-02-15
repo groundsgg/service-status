@@ -36,7 +36,7 @@ class SnapshotService {
         LOG.debugf("Building status snapshot (now=%s)", now)
 
         val activeMotdUni = motdService.getActive(now)
-        val maintenanceUni = maintenanceService.getConfig()
+        val maintenanceUni = maintenanceService.config
         val whitelistUni = maintenanceService.listWhitelist()
 
         return Panache.withSession<StatusSnapshot?>(Supplier {

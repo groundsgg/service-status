@@ -11,14 +11,17 @@ import java.time.Instant
 @Table(name = "proxy_heartbeats", schema = "status")
 class ProxyHeartbeatEntity : PanacheEntityBase() {
     @Id
+    @Column(name = "proxy_id")
     var proxyId: String? = null
 
+    @Column(name = "player_count")
     var playerCount: Int = 0
     var healthy: Boolean = false
     var version: String? = null
 
-    @Column(columnDefinition = "jsonb")
+    @Column(name = "meta", columnDefinition = "jsonb")
     var metaJson: String? = null
 
+    @Column(name = "last_seen_at")
     var lastSeenAt: Instant? = null
 }

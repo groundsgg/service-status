@@ -48,7 +48,7 @@ class ProtoMapper {
             .setStartsAt(ts(e.startsAt))
             .setEndsAt(ts(e.endsAt))
             .setUpdatedAt(ts(e.updatedAt))
-            .setEnabled(effective)
+            .setEffectiveEnabled(effective)
             .build()
     }
 

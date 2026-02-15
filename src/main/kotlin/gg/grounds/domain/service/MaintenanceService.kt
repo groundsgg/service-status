@@ -28,8 +28,6 @@ class MaintenanceService {
         }
         )
 
-    fun getConfig(): Uni<MaintenanceConfigEntity?>? = config
-
     fun isEffectiveEnabled(c: MaintenanceConfigEntity?, now: Instant): Boolean {
         if (c == null) return false
         if (c.enabled) return true

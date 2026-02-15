@@ -22,11 +22,15 @@ class MotdEntity : PanacheEntityBase() {
 
     var priority: Int = 0
 
+    @Column(name = "starts_at")
     var startsAt: Instant? = null
+    @Column(name = "ends_at")
     var endsAt: Instant? = null
 
     var enabled: Boolean = false
 
+    @Column(name = "created_at")
     var createdAt: Instant? = null
+    @Column(name = "updated_at")
     var updatedAt: Instant? = null
 }

@@ -11,7 +11,7 @@ import java.util.*
 class MotdRepository : PanacheRepositoryBase<MotdEntity?, UUID?> {
     fun findActive(now: Instant?): Uni<MotdEntity?>? {
         return find(
-            "enabled = true and (startsAt is null or startsAt <= ?1) and (endsAt is null or endsAt >= ?1)" +
+            "enabled = true and (startsAt is null or startsAt <= ?1) and (endsAt is null or endsAt >= ?1) " +
                     "order by priority desc, updatedAt desc",
             now
         ).firstResult<MotdEntity?>()
