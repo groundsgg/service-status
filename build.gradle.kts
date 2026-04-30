@@ -1,6 +1,6 @@
 plugins {
     java
-    id("io.quarkus") version "3.31.3"
+    id("io.quarkus") version "3.35.1"
 }
 
 group = "gg.grounds"
