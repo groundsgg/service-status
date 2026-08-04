@@ -70,3 +70,10 @@ tasks.test {
 tasks.quarkusDev {
     jvmArgs = listOf("--add-opens", "java.base/java.lang=ALL-UNNAMED")
 }
+
+tasks.processResources {
+    val projectVersion = version.toString()
+    filesMatching("**/default_banner.txt") {
+        filter { line: String -> line.replace("@VERSION@", projectVersion) }
+    }
+}
